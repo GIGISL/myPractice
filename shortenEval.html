@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var done = true ; 
+        var message = ''; 
+        if (done) message = '완료';
+        alert (message);
+        message = done && "찐완료";    // 단축평가로 찐완료 할당됨
+        alert (message);   
+        done = false ; 
+        message = done||"찐찐완료";
+        alert(message);
+        done = false ; 
+        message = done &&"찐찐찐완료";
+        alert(message);
+        //////////////////////////////////////////////////////////////////////
+        var elem = null ; 
+        var value = elem&&elem.value ; 
+        alert ( value);   
+
+        var elem = {
+            value : "Hi"
+            ,
+        }
+        value = elem&&elem.value ; 
+        alert(value);
+        객체를 가리키기 바라는 elem이 null을 가리킬 때 해격법 
+        //////////////////////////////////////////////////////////////////////
+        단축평가를 통해 매개변수의 기본값 설정하기 
+        function basevalue(input) {
+            input = input||'';
+            return input.length;
+        }
+        alert(basevalue());
+        alert(basevalue("안녕하세요"));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // x 초기화 후 x값 분석
+        function foo() {
+            var x = 'local';
+            console.log(x);
+            return x;
+        }
+
+        foo();
+        // y 초기화 전 y값 분석
+        function fo() {
+            console.log(y);
+            var y = 'local';
+            return y;
+        }
+        
+        fo();
+    </script>
+</body>
+</html>

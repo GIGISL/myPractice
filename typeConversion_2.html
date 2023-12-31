@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function TF(element){
+            if (Boolean(element)==true) alert(`${element}의 부울린 값은 true입니다!`);
+            else alert(`${element}의 부울린 값은 false입니다!`);
+        };
+
+        for(;;) {
+            let input = prompt("테스트 할 값을 입력하세요");
+            if(input==null) break;
+            TF(input);
+        };
+        // prompt는 입력받은 값을 무조건 문자열로 변환하는데 이를 어떻게 해결할까 
+    </script>
+</body>
+</html>

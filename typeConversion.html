@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let value = true; 
+        alert(typeof value);
+        if(typeof value == `boolean`){
+            alert("value는 부울린 값입니다. ");
+        }
+        alert("value의 타입을 바꿔봅시다");
+        value = String(value);
+        alert(typeof value);
+
+        let realNum = `123`; 
+        alert(typeof realNum)
+        realNum = Number(realNum);
+        alert(typeof realNum);
+        
+    </script>
+</body>
+</html>

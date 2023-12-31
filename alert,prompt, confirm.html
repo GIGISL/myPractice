@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = prompt("몇살?","");
+        alert(`${age}살 이시구나`);
+        //사용자가 취소버튼 누른 경우 null값 반환된다. 
+        let test = prompt("기본값이 없는 경우");
+        alert(test);
+        //항상 기본값 명시 할 것을 추천. 
+        let check = confirm("확인 했냐?");
+        alert(check);
+
+        //         간단한 페이지 만들기
+        // 중요도: 4
+        // 사용자에게 이름을 물어보고, 입력받은 이름을 그대로 출력해주는 페이지를 만들어 보세요.
+        let userName = prompt("당신의 이름은 무엇인가요?",'홍길동');
+        alert(userName); 
+
+
+
+    </script>
+</body>
+</html>

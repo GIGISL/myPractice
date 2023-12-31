@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person = {
+            name : "Jang",
+            sayHello : function() {
+                alert(`hello, my name is ${this.name}`);
+            }
+            
+            
+        };
+        // person.sayHello();
+        // console.log(person);
+        // alert(person);  
+
+        console.log(person.name);
+        console.log(person[name]);
+        
+        var x = 1, y = 2; 
+        var obj = {
+            x: x,
+            y: y,
+        };
+        console.log(obj.x,obj.y);
+
+        var z = 3, w = 4; 
+        var Oobj = {
+            z,
+            w,
+        };
+        console.log(z,w); 
+
+        var prefix = 'prop';
+        var i = 0;
+        var calpro = {};
+
+        calpro[prefix + '-' + ++i] = i;
+        calpro[prefix + '-' + ++i] = i;
+        calpro[prefix + '-' + ++i] = i;
+
+        console.log(calpro);
+        var score = 80;
+        var Ccore = score;
+
+        console.log(Ccore);
+        score = 100; 
+        console.log(Ccore);
+        
+    </script>
+</body>
+</html>

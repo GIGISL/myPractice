@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var elem = null;
+        var value = elem?.value; 
+        document.write(value,'<br>');
+        elem = {
+            value : "hi",
+        }
+        value = elem?.value;
+        document.write("value의 값은",value,'<br>');
+        document.write("elem.value의 값은",elem.value,'<br>');
+
+    
+        elem = {
+            value : "HiHi",
+        }
+        value = elem?.value; 
+        document.write("elem에 객체를 할당하고 value 키를 부여 한 후에는?",'<br>'); 
+        document.write(value,'<br>');
+        elem = {
+            value : "byeHi",
+        }
+        document.write(value,'<br>');
+        document.write(elem.value,'<br>');
+        
+        //null 병합 연산자 '??' 는 좌항의 피연산자가 널 또는 언디파인드인 경우 우항의 피연산자를 반환, 
+        //그렇지 않으면 좌항의 펴안산자를 반환 
+        let Fund = null ?? 'noname'; 
+        alert(Fund);
+
+    </script>
+</body>
+</html>

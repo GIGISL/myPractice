@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let counter=1;
+        // let a=counter++;
+        // alert(`a의 값은 ${a} counter의 값은 ${counter}`);
+        // let counter_b=1;
+        // let b=++counter_b;
+        // alert(`a의 값은 ${b} counter의 값은 ${counter_b}`);
+
+        // let Counter=0;
+        // alert(++Counter);
+         // , 연산자는 여러 표현식을 코드 한 줄에서 평가 할 수 있게 해 준다. 마지막 평가 결과만 반환된다. 
+        let comma = (3,4,5,6); 
+        alert(comma);
+
+        //     (1)    alert( null > 0 );  // (1) false
+        //     (2)alert( null == 0 ); // (2) false
+        //     (3) alert( null >= 0 ); // (3) true
+        //동등연산자 == 는 피연산자가 undefined 혹은 null 일때 형 변환 하지 않는다 . 
+        // undefined와 null을 비교 할 때만 true를 반환  
+        //그 외에는 숫자로 반환하기 때문에 (1)과 (3)이 거짓이 됨 
+
+        //  (a)       alert( undefined > 0 ); // false (1)
+        // (b) alert( undefined < 0 ); // false (2)
+        // (c) alert( undefined == 0 ); // false (3)
+        // (a)에서 비교연산자는 > 이므로  undefined를 숫자형으로 변환하려하는데 NaN이 반환됨
+        // (b)또한 마찬가지 
+        // (c)에서는 비교연산자가 == 인데 ==는  undefined와 Null을 형변환 하지 않는다 
+
+
+    </script>
+</body>
+</html>
