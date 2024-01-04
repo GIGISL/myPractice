@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = {
+            name : "Lee",
+        };
+
+        person.age = 20; 
+
+        console.log(Object.getOwnPropertyDescriptors(person));  
+
+        //get set enumerable configurable 
+
+        const Person = {
+            firstName : "Jang" ,
+            lastName : "JaeHyung",
+        
+
+        get fullName() {
+            return (`${this.firstName} ${this.lastName}`)
+            },
+
+        set fullName(name) {
+            [this.firstName, this.lastName] = name.split(" ");
+            }, 
+
+        };
+
+        alert(Person.fullName);
+        let t = prompt("이름을 입력하세요" , '');
+        Person.fullName = t ; 
+        alert(Person.fullName);
+        alert(Person.firstName);
+        alert(Person.lastName);
+
+        console.log(`그냥 이어붙이기 ! = ${Person.firstName + ' ' + Person.lastName}`); 
+        console.log(`get 함수 이용하기; ${Person.fullName}`);
+
+        //데이터 프로퍼티의 속성들 ? 
+        console.log(Object.getOwnPropertyDescriptors(Person,'firstName'));
+
+        //접근자 프로퍼티의 속성들 ? 
+        console.log(Object.getOwnPropertyDescriptors(Person,'fullName'));
+
+
+
+    </script>
+</body>
+</html>

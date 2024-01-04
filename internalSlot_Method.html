@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const o = {};
+        // // o.[[prototype]]; 접근 불가
+        // o.__proto__; 접근 가능
+
+        const person = {
+            name : 'LEE'
+        };
+
+        console.log(Object.getOwnPropertyDescriptor(person,'name')); //lee에 대한 vwec 속성들 
+        // Object.getOwnPropertyDescriptor(A,B));  객체 A의 프로퍼티키 B에 해당하는 값의 vwec속성 
+        console.log(Object.getOwnPropertyDescriptor(person));      
+        console.log(Object.getOwnPropertyDescriptors(person));
+
+        person.age = 28; 
+
+        console.log(Object.getOwnPropertyDescriptors(person))
+
+
+ 
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = {};
+        Object.defineProperty(person,'firstName', {
+            value: 'ungmo', 
+            writable: false, 
+            enumerable: false , 
+            configurable: false,
+        });
+
+        Object.defineProperty(person, 'lastName',{
+            value: 'Lee',
+        });
+
+        // person 객체의 firstName프로퍼티의 디스크립터 저장하고 출력하기 
+        let descriptor = Object.getOwnPropertyDescriptor(person, 'firstName');
+        console.log('person 객체의 firstName프로퍼티의 디스크립터 저장하고 출력하기'); 
+        console.log(descriptor); 
+
+        descriptor = Object.getOwnPropertyDescriptor(person, 'lastName');
+        console.log('person 객체의 lastName프로퍼티의 디스크립터 저장하고 출력하기'); 
+        console.log(descriptor); 
+
+        console.log(Object.keys(person));
+
+        person.lastName = 'Kim';
+        
+        delete person.lastName;
+
+        descriptor = Object.getOwnPropertyDescriptor(person,'lastName');
+        console.log('lastName',descriptor);
+
+        Object.defineProperty(person,'fullName',{
+            get() {
+                return `${this.firstName} ${this.lastName}`;
+            },
+
+            set() {
+                [this.firstName, this.lastName] = name.split(' ');
+            },
+
+            enumerable: true,
+
+            configurable: true,
+        });
+
+        descriptor = Object.getOwnPropertyDescriptor(person, 'lastName');
+        console.log(descriptor);
+
+        person.fullName = 'Heegun Lee';
+        console.log(person);
+
+
+
+    </script>
+</body>
+</html>
