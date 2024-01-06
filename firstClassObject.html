@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        const increase = function (num) {
+            return ++num;
+        };
+
+        const decrease = function (num) {
+            return --num;
+        };
+
+        const auxs = { increase , decrease } ;
+
+        console.log(auxs);
+        console.log(auxs.increase());
+        console.log(auxs.increase);
+
+        function makeCounter(aux) {
+            let num = 0;
+
+            return function () {
+                num = aux(num);
+                return num;
+            };
+        }
+
+        const increaser = makeCounter(auxs.increase);
+        console.log(increaser());
+        console.log(increaser());
+
+        const decreaser = makeCounter(auxs.decrease);
+        console.log(decreaser());
+        console.log(decreaser());
+
+
+    </script>
+</body>
+</html>

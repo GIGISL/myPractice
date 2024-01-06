@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add(x,y) {
+            return x+y;
+        }
+
+        let inst = new add();
+
+        console.log(inst);
+
+        function createUser(name, role) {
+            return { name, role };
+        }
+
+        inst = new createUser('Lee', 'admin');
+
+        console.log(inst);
+
+        const name = 'shit';
+        const lee = 'you';
+        let exam = {
+            name,
+            lee,
+        };
+        console.log(exam);
+
+        function nCircle(radius) {
+            if (!new.target) {                    // 생성자 함수인데 new 없이 호출되면 new.target이 0이 될테니 조건 전체는 1이 된다 
+                return new nCircle(radius);       //결국 new 없이 호출 될 시 new를 붙여서 반환해라 
+            }
+            this.radius = radius;
+            this.getDiameter = function() {
+                return 2*this.radius;
+            };
+        }
+
+        const nCC = nCircle(5);
+        console.log(nCC.getDiameter());
+
+    </script>
+</body>
+</html>

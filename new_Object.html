@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = new Object(); 
+        // console.log(person); 결과 객체 확인됨 
+        person.name = 'Lee';
+        person.sayHello = function() {
+            console.log("Hi! My name is " + this.name);
+
+        };
+
+        console.log(person);
+        person.name = prompt("당신의 이름은 무엇입니까",'');
+        person.sayHello();
+        
+
+
+
+    </script>
+</body>
+</html>

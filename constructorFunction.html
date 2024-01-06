@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const circle1 = {
+            radius : 5,
+            // getDiameter : function() {
+            //     return 2*this.radius;
+            // },            
+            getDiameter() {
+                return 2*this.radius;
+            },
+        };
+
+        console.log(circle1.getDiameter());
+
+        const circle2 = {
+            radius : 10,
+            // getDiameter : function() {
+            //     return 2*this.radius;
+            // },            
+            getDiameter() {
+                return 2*this.radius;
+            },
+        };
+
+        console.log(circle2.getDiameter());
+
+        //프로퍼티는 객체마다 값이 다른 경우가 많지만 메서드는 동일한 경우가 많다 !! 메서드를 밖으로 빼야겠지?
+
+        function circular(radius) {
+            this.radius = radius;
+            this.getDiameter = function() {
+                return 2*this.radius;
+            };
+        }
+
+        const exc1 = new circular(5);
+        const exc2 = new circular(10);
+
+        console.log(exc1);
+        console.log(exc2);
+        console.log(exc1.getDiameter());
+        console.log(exc2.getDiameter());
+        // 이래도 exc1 객체와 exc2 객체 각각 getdiameter를 공유해서 메모리를 많이 차지하네? 
+
+        const exc3 = new circular(15);
+        console.log(exc3);
+        console.log(exc3.radius);
+        console.log(exc3.getDiameter());
+
+        const exc4 = circular(15);
+        console.log(exc4);
+        console.log(radius);
+        console.log(getDiameter());
+
+        
+        
+        
+
+    </script>
+</body>
+</html>

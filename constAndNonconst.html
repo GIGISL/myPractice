@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function foo() {}
+        const bar = function () {};
+
+        const baz = {
+            x: function () {}
+        };
+
+        new foo(); // foo {}
+        new bar(); // bar {}
+        
+        new baz.x(); //x{}
+
+        const arrow = () => {};
+        new arrow();  // erroe arrow는 생성자 아니다. 화살푯함수, 단축함수는 생성자 아님 ! 
+
+        const obj = {
+            x() {}
+        };
+        new obj.x();
+        
+    </script>
+</body>
+</html>
