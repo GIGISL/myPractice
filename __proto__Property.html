@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = {name : 'Lee'};
+
+        // console.log(person.[[prototype]]);
+        console.log(person.__prototype__);
+
+        const obj = {};
+        const parent = { x:1};
+
+        obj.__proto__;
+        obj.__proto__=parent;
+        console.log(obj.x);
+
+        console.log(person.hasOwnProperty('__proto__')); //person이 __proto__를 고유한 프로퍼티로 가지는가? ㄴㄴ 
+        console.log(Object.getOwnPropertyDescriptor(Object.prototype,'__proto__')); //Object.prototype의 __proto__프로퍼티의 디스크립터들은 무엇인가? 
+        //g s e c 가 나오니 접근자 프로퍼티이다 
+        console.log(person.__proto__===Object.prototype);
+
+        const fuckinParents = {};
+        const child = {};
+
+        // child.__proto__ = fuckinParents;
+        // parent.__proto__=child;           비정상적인 상속 . 서로가 서로를 상속함 
+
+        const Oobj = Object.create(null);
+
+        console.log(Oobj.__proto__);
+
+        console.log(Object.getPrototypeOf(Oobj));
+        
+
+
+    </script>
+</body>
+</html>
